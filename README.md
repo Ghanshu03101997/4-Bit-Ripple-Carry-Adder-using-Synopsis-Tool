@@ -213,11 +213,16 @@ v16 b1 gnd! dc=0 pulse ( 0 1 0 0.1u 0.1u 5u 40u )
 .end
 ```
 
+
+# Author:
+• Ghanshyam Verma, M.Tech(VLSI), IIIT–Naya Raipur, Atal Nagar – 493661
+
 	
 # Acknowledgements:
 • <a href='https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/'>Cloud Based Analog IC Design Hackathon</a></br>
 • <a href='https://www.synopsys.com/'>Synopsys India</a></br>
 • <a href='https://www.vlsisystemdesign.com/'>VLSI System Design (VSD) Corp. Pvt. Ltd India</a></br>
 
-
+# References:
+[1]Radha, S., et al. "Floor planning of 16 bit counter design for health care applications using 180nm technology in cadence tool." 2018 Second International Conference on Electronics, Communication and Aerospace Technology (ICECA). IEEE, 2018.
 
