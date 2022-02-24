@@ -74,7 +74,7 @@ To understand the working of ripple carry adder completely, you need to have a l
 
 ![DocScanner 24-Feb-2022 5-26 pm](https://user-images.githubusercontent.com/98162318/155519794-504263ea-8132-46aa-9be3-ff2f694562a4.jpg)
 
-# netlist
+# Netlist
 ```sh
 *  Generated for: PrimeSim
 *  Design library name: Ripple_Carry_Adder
