@@ -4,7 +4,7 @@
  
  * Tool used
  * [Introduction](#Introduction)
- * Simulation and Schematic Diagram
+ * [Simulation and Schematic Diagram](#Simulation and Schematic Diagram)
   
        --> Inverter Symbol and schematic.
        --> XOR gate Symbol and Schematic.
