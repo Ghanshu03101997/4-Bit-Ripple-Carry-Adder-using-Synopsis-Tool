@@ -73,6 +73,146 @@ To understand the working of ripple carry adder completely, you need to have a l
 
 
 ![DocScanner 24-Feb-2022 5-26 pm](https://user-images.githubusercontent.com/98162318/155519794-504263ea-8132-46aa-9be3-ff2f694562a4.jpg)
+
+# netlist
+```sh
+*  Generated for: PrimeSim
+*  Design library name: Ripple_Carry_Adder
+*  Design cell name: ripple_carry_adder
+*  Design view name: schematic
+.lib '/PDK/SAED_PDK32nm/hspice/saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Thu Feb 24 12:31:28 2022
+
+.global gnd!
+********************************************************************************
+* Library          : NAND_GATE
+* Cell             : nand_gate
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt nand_gate gnd_1 in1 in2 out vdd
+xm1 net5 in2 gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm0 out in1 net5 net5 n105 w=0.1u l=0.03u nf=1 m=1
+xm3 out in2 vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+xm2 out in1 vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+.ends nand_gate
+
+********************************************************************************
+* Library          : Inverter_ghanshu
+* Cell             : inverter
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt inverter gnd_1 in out vdd
+xm0 out in gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm1 out in vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+.ends inverter
+
+********************************************************************************
+* Library          : XOR_GATE
+* Cell             : xor_gate
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt xor_gate a b gnd_1 out vdd
+xm3 out a net15 net15 n105 w=0.1u l=0.03u nf=1 m=1
+xm2 out net35 net11 net11 n105 w=0.1u l=0.03u nf=1 m=1
+xm1 net15 b gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm0 net11 net39 gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm7 net33 b vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+xm6 net33 a vdd vdd p105 w=0.1u l=0.03u nf=1 m=1
+xm5 out net39 net33 net33 p105 w=0.1u l=0.03u nf=1 m=1
+xm4 out net35 net33 net33 p105 w=0.1u l=0.03u nf=1 m=1
+xi10 gnd_1 b net39 vdd inverter
+xi9 gnd_1 a net35 vdd inverter
+.ends xor_gate
+
+********************************************************************************
+* Library          : XNOR_GATE
+* Cell             : xor_gate
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt xor_gate_1 a b out gnd_1 vdd
+xi0 a b gnd_1 net9 vdd xor_gate
+xi1 gnd_1 net9 out vdd inverter
+.ends xor_gate_1
+
+********************************************************************************
+* Library          : 1_Bit_Full_Adder
+* Cell             : full_Adder
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt full_adder a b carry cin sum gnd_1 vdd
+xi2 gnd_1 net31 b net11 vdd nand_gate
+xi1 gnd_1 net36 net11 carry vdd nand_gate
+xi0 gnd_1 a cin net36 vdd nand_gate
+xi5 net29 b sum gnd_1 vdd xor_gate_1
+xi4 a cin net29 gnd_1 vdd xor_gate_1
+xi3 a cin net34 gnd_1 vdd xor_gate_1
+xi6 gnd_1 net34 net31 vdd inverter
+.ends full_adder
+
+********************************************************************************
+* Library          : Ripple_Carry_Adder
+* Cell             : ripple_carry_adder
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi3 a3 b3 cout net26 s3 gnd! net29 full_adder
+xi2 a2 b2 net26 net19 s2 gnd! net29 full_adder
+xi1 a1 b1 net19 net12 s1 gnd! net29 full_adder
+xi0 a0 b0 net12 gnd! s0 gnd! net29 full_adder
+v4 net29 gnd! dc=1.8
+v14 b3 gnd! dc=0 pulse ( 1 0 0 0.1u 0.1u 5u 40u )
+v13 a3 gnd! dc=0 pulse ( 0 1 0 0.1u 0.1u 5u 40u )
+v12 b2 gnd! dc=0 pulse ( 0 1 0 0.1u 0.1u 5u 40u )
+v11 a2 gnd! dc=0 pulse ( 0 1 0 0.1u 0.1u 5u 40u )
+v18 b0 gnd! dc=0 pulse ( 0 1 0 0.1u 0.1u 5u 40u )
+v17 a0 gnd! dc=0 pulse ( 0 1 0 0.1u 0.1u 5u 10u )
+v15 a1 gnd! dc=0 pulse ( 1 0 0 0.1u 0.1u 5u 40u )
+v16 b1 gnd! dc=0 pulse ( 0 1 0 0.1u 0.1u 5u 40u )
+
+
+
+
+
+
+
+
+.tran '1u' '120u' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(a0) v(a1) v(a2) v(a3) v(b0) v(b1) v(b2) v(b3) v(cout) v(s0) v(s1)
++ v(s2) v(s3)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
+```
+
 	
 # Acknowledgements:
 • <a href='https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/'>Cloud Based Analog IC Design Hackathon</a></br>
