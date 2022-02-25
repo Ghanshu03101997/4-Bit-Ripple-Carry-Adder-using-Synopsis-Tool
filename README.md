@@ -1,10 +1,10 @@
 # 4-Bit Ripple Carry Adder
 # Table of Contents
-  * [Abstract](#Abstract)
+* [Abstract](#Abstract)
  
 * [Tools Used](#Tools-Used)
-  * [Introduction](#Introduction)
- * [Simulation in Synopsis Tool](#Simulation in Synopsis Tool)
+* [Introduction](#Introduction)
+* [Simulation in Synopsis Tool](#Simulation-in-Synopsis-Tool)
 
  
   
@@ -15,11 +15,11 @@
        --> Ripple Carry Adder Schematic Diagram.
        
 * [Result](#Result)
-* [Waveform Observation](#Waveform Observation)
+* [Waveform Observation](#Waveform-Observation)
  
-  * [Netlist](#Netlist)
+* [Netlist](#Netlist)
 * [Author](#Author)
-  * [Acknowledgements](#Acknowledgements)
+* [Acknowledgements](#Acknowledgements)
 * [References](#References)
  
 ### ABSTRACT:-
