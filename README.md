@@ -11,9 +11,9 @@
      * [XOR gate Symbol and Schematic.](#XOR-gate-Symbol-and-Schematic.)
      * [NAND gate Symbol and Schematic.](# NAND-gate-Symbol-and-Schematic.)
    
-     *.[1-Bit Full Adder Schematic Diagram.](#1-Bit-Full-Adder-Schematic-Diagram.)
+     * [1-Bit Full Adder Schematic Diagram.](#1-Bit-Full-Adder-Schematic-Diagram.)
         
-     *.[Ripple-Carry-Adder-Schematic-Diagram.].(#Ripple-Carry-Adder-Schematic-Diagram.)
+     * [Ripple-Carry-Adder-Schematic-Diagram.].(#Ripple-Carry-Adder-Schematic-Diagram.)
         
        
        
