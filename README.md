@@ -2,24 +2,25 @@
 # Table of Contents
   * [Abstract](#Abstract)
  
- * Tool used
- * Introduction
+* [Tools Used](#Tools-Used)
+  * [Introduction](#Introduction)
+ * [Simulation in Synopsis Tool](#Simulation in Synopsis Tool)
 
-
- * Simulation and Schematic Diagram
+ 
   
        --> Inverter Symbol and schematic.
        --> XOR gate Symbol and Schematic.
        --> NAND gate Symbol and Schematic.
        --> 1-Bit Full Adder Schematic Diagram.
        --> Ripple Carry Adder Schematic Diagram.
-         
- * Result 
- * Waveform Observation
- * Netlist of the Circuit
- * Author
- * Acknowledgements
- * references
+       
+* [Result](#Result)
+* [Waveform Observation](#Waveform Observation)
+ 
+  * [Netlist](#Netlist)
+* [Author](#Author)
+  * [Acknowledgements](#Acknowledgements)
+* [References](#References)
  
 ### ABSTRACT:-
 In this paper design of 4-Bit ripple carry adder is proposed using a CMOS  full adder cell. Multiple full adder circuits can be cascaded in parallel to add an N-bit number .For N-bit parallel adder , there must be N number of full adder circuits. A ripple carry adder is a logic circuit in which the carry out of each full adder is the carry in of the succeeding next most significant full adder.To understand the working of a ripple carry adder completely , you need to have a look at the full adder too.Full adder is a logic circuit that add two input operand bits plus a carry in bit and output a carry out bit and sum bit. I have implemented Ripple Carry Adder with the help of CMOS Full adder.
