@@ -13,7 +13,7 @@
    
      * [1-Bit Full Adder Schematic Diagram.](#1-Bit-Full-Adder-Schematic-Diagram.)
         
-     * [Ripple-Carry-Adder-Schematic-Diagram.].(#Ripple-Carry-Adder-Schematic-Diagram.)
+     * [Ripple-Carry-Adder-Schematic-Diagram.](#Ripple-Carry-Adder-Schematic-Diagram.)
         
        
        
