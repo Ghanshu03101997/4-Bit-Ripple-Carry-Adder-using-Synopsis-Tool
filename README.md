@@ -6,17 +6,17 @@
 * [Introduction](#Introduction)
 * [Simulation in Synopsis Tool](#Simulation-in-Synopsis-Tool)
 
- 
-         * [Inverter Symbol and schematic.](#Inverter-Symbol-and-schematic.)
-         *  [XOR gate Symbol and Schematic.](#XOR-gate-Symbol-and-Schematic.)
-         * [ NAND gate Symbol and Schematic.](# NAND-gate-Symbol-and-Schematic.)
+    
+     * [Inverter Symbol and schematic.](#Inverter-Symbol-and-schematic.)
+     * [XOR gate Symbol and Schematic.](#XOR-gate-Symbol-and-Schematic.)
+     * [NAND gate Symbol and Schematic.](# NAND-gate-Symbol-and-Schematic.)
    
-         * [1-Bit Full Adder Schematic Diagram.](#1-Bit-Full-Adder-Schematic-Diagram.)
+     *.[1-Bit Full Adder Schematic Diagram.](#1-Bit-Full-Adder-Schematic-Diagram.)
         
-          * [Ripple-Carry-Adder-Schematic-Diagram.](#Ripple-Carry-Adder-Schematic-Diagram.)
+     *.[Ripple-Carry-Adder-Schematic-Diagram.].(#Ripple-Carry-Adder-Schematic-Diagram.)
         
        
-       --> Ripple-Carry-Adder-Schematic-Diagram.
+       
        
 * [Result](#Result)
 * [Waveform Observation](#Waveform-Observation)
